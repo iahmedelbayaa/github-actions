@@ -10,7 +10,7 @@
 # GitHub Actions 🪐
 
 ## Description ✍
-### This is a Express Rest API. I'm trying here to run a _CI/CD_ pipeline starting from building the docker image till deploying the container to _AWS EC2 Ubuntu_ instance every time I push updates to the master branch. Here are the steps:
+### This is a Express Rest API. I'm trying here to run a _CI/CD_ pipeline starting from building the docker image till deploying the container to _AWS EC2 Ubuntu_ instance every time I push updates to the Main branch. Here are the steps:
 
 ## _Continuous Integration (CI)_ ✅
 - Checkout code.
