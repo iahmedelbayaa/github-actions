@@ -31,7 +31,7 @@ jobs:
       - name: Delete existing docker images
         run: docker rmi -f $(docker images ls --format '{{.Repository}}' | grep -v "runner") || true 
       - name: Pull docker image
-        run: docker pull $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }}
+        run: docker pull $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }} || true
       - name: Run docker container
         run: docker run -d -p 3000:3000 --name my-express-container $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }}
       - name: Test the hello-world endpoint
