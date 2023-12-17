@@ -15,7 +15,7 @@
 ## _Continuous Integration (CI)_ ✅
 - Checkout code.
 - Login to dockerhub.
-- Build docker image that contains the Spring Boot Rest API and tag it with the commit sha.
+- Build docker image that contains the Express Rest API and tag it with the commit sha.
 - Push the docker image to dockerhub.
 
 ## _Continuous Deployment (CD)_ 🚀
