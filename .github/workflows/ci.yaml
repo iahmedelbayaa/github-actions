@@ -2,7 +2,7 @@ name: CI Pipeline/Workflow
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -20,6 +20,8 @@ jobs:
         run: docker build -t $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }} .
       - name: Push docker image to dockerhub
         run: docker push $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }}
+
+
 
 
 
