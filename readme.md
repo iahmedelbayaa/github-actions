@@ -21,8 +21,8 @@
 ## _Continuous Deployment (CD)_ 🚀
 - Stop running docker containers.
 - Delete existing docker images.
-- Pull docker image that contains the Spring Boot Rest API.
-- Run docker container and expose port _8080_.
+- Pull docker image that contains the Express Rest API.
+- Run docker container and expose port _3000_.
 
 ###
 ###
