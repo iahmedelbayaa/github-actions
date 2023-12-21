@@ -35,4 +35,4 @@ jobs:
       - name: Run docker container
         run: docker run -d -p 3000:3000 --name my-express-container $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }} || true
       - name: Test the hello-world endpoint
-        run: sleep 5 && curl -X GET localhost:3000/
+        run: sleep 5 && curl -X GET ec2-3-90-219-190.compute-1.amazonaws.com:3000/
