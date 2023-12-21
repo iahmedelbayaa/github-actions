@@ -27,9 +27,9 @@ jobs:
     needs: ci-build-and-push-docker-image
     steps:
       - name: Remove existing docker containers
-        run: docker rm -f $(docker ps -aq | grep -v "$(docker ps -aq -f "name:runner")") || true
+        run: docker rm -f $(docker ps -aq | grep -v "$(docker ps -aq -f "name=runner")") || true
       - name: Delete existing docker images
-        run: docker rmi -f $(docker images ls --format '{{.Repository}}' | grep -v "runner") || true 
+        run: docker rmi -f $(docker image ls -q --format '{{.Repository}}:{{.Tag}}' | grep -v "runner") || true
       - name: Pull docker image
         run: docker pull $DOCKERHUB_USERNAME/my-express-image:${{ github.sha }} || true
       - name: Run docker container
