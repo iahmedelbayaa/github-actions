@@ -1,10 +1,8 @@
-docker run -d --name <runner-container-name> \
-    -e RUNNER_NAME=<runner-name> \
-    -e GITHUB_ACCESS_TOKEN=<github-access-token> \
-    -e RUNNER_REPOSITORY_URL=https://github.com/<username>/<repo-name> \
+docker run -d --name runner-1 \
+    -e GITHUB_USERNAME=iahmedelbayaa \
+    -e GITHUB_REPOSITORY=github-actions \
+    -e GITHUB_PERSONAL_ACCESS_TOKEN=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 \
+    -e RUNNER_NAME=githubAction-Runner-1 \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    tcardonne/github-runner
-
-
-
-    # To automate runner creation and registration
+    -v /usr/bin/docker:/usr/bin/docker \
+    omarhosny102/github-runner
